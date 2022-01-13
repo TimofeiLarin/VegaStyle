@@ -1,0 +1,27 @@
+include pug/libs/_libs
+
+doctype html
+html(lang='en')
+  include pug/_head
+  body
+    .container
+      h1 Lorem, ipsum dolor.
+      h2 Lorem ipsum dolor sit amet.
+      img(src='./images/Rectangle36.png' alt='image')
+      +image('Rectangle38')
+    .container
+      // Button trigger modal
+      button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#staticBackdrop')
+        | Подробнее
+      // Modal
+      #staticBackdrop.modal.fade(data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='staticBackdropLabel' aria-hidden='true')
+        .modal-dialog
+          .modal-content
+            .modal-header
+              h5#staticBackdropLabel.modal-title Modal title
+              button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+              | Современный диван в стиле "неоклассика" с налетом винтажности - отличное решение для тех, кто стремится совместить удобство с компактностью и необычным экстерьером. Оригинальная стежка сиденья повторяется на боковинах и создает эффект легкости и воздушности. Для модели рекомендуются мягкие, легко драпирующиеся ткани.
+            .modal-footer
+              button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+              button.btn.btn-primary(type='button') Understood

@@ -1,0 +1,12 @@
+$primaryColor: blue;
+$secondaryColor: green;
+
+h1  {
+  color: $primaryColor;
+  font-family: Lora;
+}
+h2  {
+  color: $secondaryColor;
+  background: url("../images/Rectangle36.png");
+  font-family: Lato;
+}
