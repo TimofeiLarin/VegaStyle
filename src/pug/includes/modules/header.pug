@@ -1,0 +1,38 @@
+header.container
+  .row
+    a(href="#").col-2
+      +image("Rectangle36.png", "215px", "50px")
+    .location.col-2
+      +icon("location.svg", "17.4px", "24px")
+      span.location__text Санкт-Петербург
+    nav.col-3
+      ul.row.nav
+        li.nav__item.col
+          a(href="#").nav__link О нас
+        li.nav__item.col
+          a(href="#").nav__link Каталог
+          ul.dropdown
+            li.dropdown__item
+              a(href="#").dropdown__link Прямые диваны
+            li.dropdown__item
+              a(href="#").dropdown__link Угловые диваны
+            li.dropdown__item
+              a(href="#").dropdown__link Модульные диваны
+            li.dropdown__item
+              a(href="#").dropdown__link Мини диваны
+            li.dropdown__item
+              a(href="#").dropdown__link Кровати
+            li.dropdown__item
+              a(href="#").dropdown__link Кресла и стулья
+        li.nav__item.col
+          a(href="#").nav__link Отзывы
+        li.nav__item.col
+          a(href="#").nav__link Контакты
+    button.favorites__button.col-1
+      +icon("star.svg")
+      span.favorites__button Избранное
+    .phone.col-2
+      +icon("phone.svg")
+      span
+        a(href="tel:+7 (000) 000-00-00").phone +7 (000) 000-00-00
+    button.bakecall__button.col-2 Обратный звонок

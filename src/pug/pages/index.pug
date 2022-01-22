@@ -1,13 +1,28 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title Document
-  body
-    .conteiner
-      h1 Тест
-      img(src=require('../../images/Rectangle36.png') alt='image')
-      h2 Тест
-      a(href="index2.html") Link 
+extends ../layout/main
+
+block variables
+  - let title = 'Vega Style';
+  - let pageClass = 'main-page';
+
+block content
+  .block-1-promo.container
+    h1.title Комфортная мебель для жизни
+    h2.subtitle Проще и быстрее, чем в обычном магазине!
+    button.button__more Подробнее
+    .section-promo
+      +image("couch-main.png", "984px", "514px").section-prono__content
+      ul.section-promo__nav
+        li.section-promo__item
+          input(type="radio")#section-promo__
+        li.section-promo__item
+          input(type="radio")#section-promo__
+        li.section-promo__item
+          input(type="radio")#section-promo__
+  .block-2-promo.container
+    +image("photo-block-2.png", "705px", "278px").block-2-promo__photo
+    h2.block-2-promo__title Больше места для хранения вещей — больше пространства для жизни!
+    p.block-2-promo__text Отличный вариант для кухни, где наличие дополнительного пространства для хранения исключает необходимость...
+    a(href="#").block-2-promo__more Подробнее
+  .block-3-news.container
+    
+  a(href="about.html") Link 

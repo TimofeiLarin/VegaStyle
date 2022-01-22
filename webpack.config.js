@@ -1,4 +1,3 @@
-const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPugPlugin = require("html-webpack-pug-plugin");
@@ -34,8 +33,8 @@ module.exports = {
       filename: "./index.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/pug/pages/index2.pug",
-      filename: "./index2.html",
+      template: "./src/pug/pages/about.pug",
+      filename: "./about.html",
     }),
     new HtmlWebpackPugPlugin(),
   ],
