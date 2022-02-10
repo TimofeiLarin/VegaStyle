@@ -1,0 +1,50 @@
+.footer{
+  background-color: #F8F8F8;
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 70px 20px;
+    max-width: 1306px;
+  }
+  &__titles{
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    &:last-child{
+      margin-bottom: 30px;
+    }
+  }
+  &__menu{
+    &__items{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    &__item{
+        padding-bottom: 15px;
+      &__link{
+        color: $dark-green;
+        &:hover{
+          color: $dark-green;
+        }
+      }
+    }
+  }
+  &__location{
+    &__address{
+      width: 150px;
+      margin-bottom: 15px;
+    }
+    &__phone{
+      color: $dark-green;
+      &:hover{
+        color: $dark-green;
+      }
+    }
+  }
+  &__social-networks__item:not(:last-child){
+    margin-right: 30px;
+  }
+}

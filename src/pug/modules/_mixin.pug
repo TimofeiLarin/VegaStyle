@@ -1,0 +1,16 @@
+-
+    var menu = [
+        {name: "показания", link: "#"},
+        {name: "Применение", link: "#"},
+        {name: "О препарате", link: "#"},
+        {name: "Специалистам", link: "#"},
+        {name: "О компании", link: "action.html"},
+        {name: "Где найти", link: "delivery.html"}
+    ];
+mixin navItem
+    ul.header-nav-ul
+        for inner in menu
+            li.header-nav-li
+                a.header-nav-link(href=inner.link)
+                    span=inner.name
+                    span=inner.name

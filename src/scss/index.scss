@@ -1,0 +1,350 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: $dark-green;
+}
+.block-1-promo{
+  padding: 30px 0;
+  &__title{
+    font-family: 'Lora', serif;
+    font-size: 60px;
+    margin-top: 60px;
+  }
+  &__text{
+    font-size: 32px;
+    margin-top: 20px;
+  }
+  &__more{
+    position: relative;
+    color: $dark-green;
+    font-size: 36px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: $dark-green;
+    }
+    &:hover{
+      text-decoration: none;
+      color: $dark-green;
+    }
+  }
+}
+
+.block-2-news{
+  padding: 100px 0 140px;
+  background-color: $dark-green;
+  color: $white;
+  &__title{
+    font-family: 'Lora', serif;
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(3, 258px);
+    margin-left: 290px;
+    margin-right: 190px;
+    gap: 30px;
+
+  }
+  &__news-1{
+    background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/assets/images/news-photo-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 378px 0 40px 40px;
+    max-width: 889px;
+    grid-column: 1 / 9;
+    grid-row: 1 / 3;
+    &__title-news {
+      font-size: 32px;
+      font-weight: 700;
+    }
+    &__date-news {
+      font-size: 18px;
+      padding-top: 20px;
+      font-weight: 400;
+    }
+  }
+  &__news-2{
+    background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/assets/images/news-photo-2.png");
+    grid-column: 9 / 14;
+    grid-row: 1 / 2;
+  }
+  &__news-3{
+    background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/assets/images/news-photo-3.png");
+    grid-column: 9 / 14;
+    grid-row: 2 / 3;
+  }
+  &__news-4{
+    background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/assets/images/news-photo-4.png");
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+  }
+  &__news-5{
+    background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/assets/images/news-photo-5.png");
+    grid-column: 5 / 9;
+    grid-row: 3 / 4;
+  }
+  &__news-6{
+    background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/assets/images/news-photo-6.png");
+    grid-column: 9 / 14;
+    grid-row: 3 / 4;
+  }
+  &__sm{
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 147px 0 30px 30px;
+    &__title-news {
+      width: 75%;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    &__title-news-2{
+      width: 100%;
+    }
+    &__date-news {
+      font-size: 14px;
+      padding-top: 20px;
+      font-weight: 400;
+    }
+  }
+}
+.big-container{
+  position: relative;
+  overflow: hidden;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: -20%;
+    border:1px solid #C2811D;
+    border-radius: 50%;
+    padding: 689px;
+    opacity: 0.4;
+    z-index: -1;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    bottom:-10%;
+    left: -20%;
+    border:1px solid #C2811D;
+    border-radius: 50%;
+    padding: 561px;
+    opacity: 0.4;
+    z-index: -1;
+  }
+}
+.block-3-projects{
+  margin-top: 120px;
+  margin-bottom: 120px;
+  &__title{
+    font-size: 48px;
+    font-family: 'Lora', serif;
+    margin-bottom: 15px;
+  }
+  &__text{
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  &__more{
+    display:inline-block;
+    padding: 22px 73px;
+    background: $ligt-green;
+    color: $white;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    &:hover{
+      color: $white;
+    }
+  }
+  &__slider{
+    position: absolute;
+    top: 120px;
+    right: -10%;
+    width: 75%;
+    padding-bottom: 75px;
+    &__wrapper{
+      position: relative;
+      overflow: hidden;
+    }
+    &__nav{
+      position:absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      &__prev{
+        background: url("/assets/images/Vector2.svg");
+        width: 25px;
+        height: 45px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: none;
+        margin: 0 50px;
+      }
+      &__next{
+        background: url("/assets/images/Vector1.svg");
+        width: 25px;
+        height: 45px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: none;
+        margin: 0 50px;
+      }
+    }
+    &:hover .block-3-projects__slider__nav{
+      display: flex;
+    }
+    &__slides{
+      display: flex;
+      &__slide{
+        margin-left: 30px;
+        width: 338px;
+        height: 473px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+      }
+      .projects__slide-1{
+        background: linear-gradient(360deg, #023838 0%, rgba(2, 56, 56, 0) 100%), url("/assets/images/projects-photo-1.png");
+        &:hover{
+          background: url("/assets/images/projects-photo-1.png");
+        }
+      }
+      .projects__slide-2{
+        background: linear-gradient(360deg, #023838 0%, rgba(2, 56, 56, 0) 100%), url("/assets/images/projects-photo-2.png");
+        &:hover{
+          background: url("/assets/images/projects-photo-2.png");
+        }
+      }
+      .projects__slide-3{
+        background: linear-gradient(360deg, #023838 0%, rgba(2, 56, 56, 0) 100%), url("/assets/images/projects-photo-3.png");
+        
+        &:hover{
+          background: url("/assets/images/projects-photo-3.png");
+        }
+      }
+      .projects__slide-4{
+        background: linear-gradient(360deg, #023838 0%, rgba(2, 56, 56, 0) 100%), url("/assets/images/projects-photo-4.png");
+        &:hover{
+          background: url("/assets/images/projects-photo-4.png");
+        }
+      }
+    }
+  }
+}
+.block-4-delivery{
+  max-width: 1072px;
+  min-width: 760px;
+  background: linear-gradient(96.98deg, #023838 -37.22%, #0F7C7C 100%);
+  border-radius: 20px;
+  margin-top: 180px;
+  padding: 60px;
+  &__title{
+    color: $white;
+    font-size: 64px;
+    font-family: 'Lora', serif;
+    margin-bottom: 40px;
+  }
+  &__more{
+    display:inline-block;
+    padding: 22px 73px;
+    background: $white;
+    color: $dark-green;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    &:hover{
+      color: $dark-green;
+    }
+  }
+}
+.block-5-checkout{
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/assets/images/back-checkout.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 120px;
+  padding: 78px;
+  color: $white;
+  &__title{
+    font-size: 64px;
+    font-family: 'Lora', serif;
+  }
+  &__subtitle{
+    font-size: 24px;
+    margin-bottom: 60px;
+  }
+  &__form{
+   &__input{
+    width: 245px;
+    font-size: 18px;
+    border-radius: 50px;
+    padding: 22px 0;
+    &:not(:last-child){
+      margin-right: 30px;
+      border: 1px solid $white;
+      padding-left: 30px;
+      background: transparent;
+      color: $white;
+    }
+    &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $white;
+      opacity: 0.5;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: $white;
+        opacity: 0.5;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: $white;
+        opacity: 0.5;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: $white;
+        opacity: 0.5;
+    }
+    &:last-child{
+      background: #FEB970;
+      color: $dark-green;
+      border: none;
+    }
+   }
+  }
+}
+.block-6-warehouse{
+  max-width: 1072px;
+  min-width: 760px;
+  background: url("/assets/images/back-warehouse.png");
+  border-radius: 20px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  padding:101px 60px;
+  &__title{
+    color: $white;
+    font-size: 72px;
+    font-family: 'Lora', serif;
+    margin-bottom: 40px;
+  }
+  &__more{
+    display:inline-block;
+    padding: 22px 73px;
+    background: $white;
+    color: $dark-green;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    &:hover{
+      color: $dark-green;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+types:
+  - deploy
+
+job_deploy:
+  image: tetraweb/php:7.1
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - echo "$SSH_PRIVATE_KEY" >> ~/.ssh/id_rsa && chmod 700 ~/.ssh/id_rsa
+    - echo "$SSH_PUBLIC_KEY" >> ~/.ssh/id_rsa.pub && chmod 700 ~/.ssh/id_rsa.pub
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - chmod 700 ~/.ssh/config
+  type: deploy
+  script:
+    - ssh pavlusha@176.119.159.35 "cd www && rm -rf kubatura.f.midow.ru && mkdir kubatura.f.midow.ru && exit"
+    - scp -P22 -r dist/* pavlusha@176.119.159.35:www/kubatura.f.midow.ru
+  only:
+    - pavlusha
