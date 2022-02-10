@@ -45,6 +45,7 @@ header.header
           span.phone__number +7 (000) 000-00-00
       .col-auto
         button.bakecall-button Обратный звонок
+if(pageClass == "main-page")
   .container-promo
     .container
       .row.align-items-center
@@ -75,3 +76,15 @@ header.header
                   label(for="radio2").slider__nav__btn.slider__nav__btn__2
                   label(for="radio3").slider__nav__btn.slider__nav__btn__3
                   label(for="radio4").slider__nav__btn.slider__nav__btn__4
+else
+  .container-promo.conteiner-promo-2
+    .container
+      .row.align-items-center
+        .col-6
+          h1.title 
+            |Комфортная
+            br
+            |мебель для жизни
+          h2.subtitle Проще и быстрее, чем в обычном магазине!
+        .col-6.section-static
+            
