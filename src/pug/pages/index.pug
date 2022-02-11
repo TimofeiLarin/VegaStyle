@@ -16,29 +16,7 @@ block content
           |Отличный вариант для кухни, где наличие дополнительного
           |пространства для хранения исключает необходимость...
         a(href="#").block-1-promo__more Подробнее
-  .block-2-news
-    h2.block-2-news__title.text-center Новости
-    .block-2-news__container
-      .block-2-news__news-1
-        h3.block-2-news__news-1__title-news
-          |Больше места для хранения вещей
-          |— больше пространства для жизни!
-          p.block-2-news__news-1__date-news 18.06.2020
-      .block-2-news__news-2.block-2-news__sm
-        h3.block-2-news__sm__title-news «Янтарное дерево» – декор из польского зернохранилища
-          p.block-2-news__sm__date-news 18.06.2020
-      .block-2-news__news-3.block-2-news__sm
-        h3.block-2-news__sm__title-news Мировая новинка: PCS® Preventive Contact System
-          p.block-2-news__sm__date-news 18.06.2020
-      .block-2-news__news-4.block-2-news__sm
-        h3.block-2-news__sm__title-news.block-2-news__sm__title-news-2 FELDER - портальный, фрезерный ЧПУ с безграничными возможностями
-          p.block-2-news__sm__date-news 18.06.2020
-      .block-2-news__news-5.block-2-news__sm
-        h3.block-2-news__sm__title-news.block-2-news__sm__title-news-2 FELDER - портальный, фрезерный ЧПУ с безграничными возможностями
-          p.block-2-news__sm__date-news 18.06.2020
-      .block-2-news__news-6.block-2-news__sm
-        h3.block-2-news__sm__title-news FELDER - портальный, фрезерный ЧПУ с безграничными возможностями
-          p.block-2-news__sm__date-news 18.06.2020
+  +block-news
   .big-container
     .block-3-projects.container
       .row.align-items-center
@@ -50,16 +28,7 @@ block content
             |Проще и быстрее, чем в обычном магазине!Проще и быстрее, чем в обычном магазине!
           a(href="#").block-3-projects__more Подробнее
         .col-9.section-static
-          .block-3-projects__slider
-            .block-3-projects__slider__nav
-              button.block-3-projects__slider__nav__prev
-              button.block-3-projects__slider__nav__next
-            .block-3-projects__slider__wrapper
-              .block-3-projects__slider__slides
-                a(href="#").block-3-projects__slider__slides__slide.projects__slide-1
-                a(href="#").block-3-projects__slider__slides__slide.projects__slide-2
-                a(href="#").block-3-projects__slider__slides__slide.projects__slide-3
-                a(href="#").block-3-projects__slider__slides__slide.projects__slide-4
+          +slider-projects
     .block-4-delivery.container
       .row
         .col.my-auto

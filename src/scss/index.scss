@@ -61,9 +61,13 @@ body {
     max-width: 889px;
     grid-column: 1 / 9;
     grid-row: 1 / 3;
+    &:hover{
+      color: $white;
+    }
     &__title-news {
       font-size: 32px;
       font-weight: 700;
+      color: $white;
     }
     &__date-news {
       font-size: 18px;
@@ -75,6 +79,11 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/assets/images/news-photo-2.png");
     grid-column: 9 / 14;
     grid-row: 1 / 2;
+    &__date-news {
+      font-size: 14px;
+      margin-top: 10px;
+      font-weight: 400;
+    }
   }
   &__news-3{
     background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/assets/images/news-photo-3.png");
@@ -100,19 +109,18 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
-    padding: 147px 0 30px 30px;
+    padding: 137px 0 30px 30px;
+    &:hover{
+      color: $white;
+    }
     &__title-news {
       width: 75%;
       font-size: 18px;
       font-weight: 700;
+      color: $white;
     }
     &__title-news-2{
       width: 100%;
-    }
-    &__date-news {
-      font-size: 14px;
-      padding-top: 20px;
-      font-weight: 400;
     }
   }
 }
@@ -169,18 +177,20 @@ body {
   &__slider{
     position: absolute;
     top: 120px;
-    right: -10%;
-    width: 75%;
+    left: 35%;
     padding-bottom: 75px;
     &__wrapper{
       position: relative;
       overflow: hidden;
     }
+    &:hover .block-3-projects__slider__nav{
+      display: block;
+    }
     &__nav{
       position:absolute;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 40%;
+      transform: translateX(-60%);
       display: none;
       &__prev{
         background: url("/assets/images/Vector2.svg");
@@ -200,9 +210,6 @@ body {
         border: none;
         margin: 0 50px;
       }
-    }
-    &:hover .block-3-projects__slider__nav{
-      display: flex;
     }
     &__slides{
       display: flex;
@@ -228,7 +235,6 @@ body {
       }
       .projects__slide-3{
         background: linear-gradient(360deg, #023838 0%, rgba(2, 56, 56, 0) 100%), url("/assets/images/projects-photo-3.png");
-        
         &:hover{
           background: url("/assets/images/projects-photo-3.png");
         }

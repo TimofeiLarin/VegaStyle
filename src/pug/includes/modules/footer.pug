@@ -1,31 +1,10 @@
 footer.footer
   .footer__container
-    .footer__menu
-      h2.footer__titles Меню
-      ul.footer__menu__items
-        li.footer__menu__item
-          a(href="about.html").footer__menu__item__link О нас
-        li.footer__menu__item
-          a(href="#").footer__menu__item__link Продукция
-        li.footer__menu__item
-          a(href="#").footer__menu__item__link Отзывы
-        li.footer__menu__item 
-          a(href="#").footer__menu__item__link Контакты
-        li.footer__menu__item 
-          a(href="#").footer__menu__item__link Новости
-        li.footer__menu__item 
-          a(href="#").footer__menu__item__link Доставка
+    +footer-menu
     .footer__location
       h2.footer__titles Контакты
       p.footer__location__address Санкт-Петербург, Ленинский пр., 151, офис 711
       a(href="tel:+7 (000) 000-00-00").footer__location__phone +7 (000) 000-00-00
     .footer__map
       <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A56c003c9578c42c089da1b6bdd4cad2bd3254a93c51392ceb19c4d82b39ae0d1&amp;width=430&amp;height=256&amp;lang=ru_RU&amp;scroll=true"></script>
-    .footer__social-networks
-      h2.footer__titles Следите за нами
-      a(href="#").footer__social-networks__item
-        +icon("vk.svg")
-      a(href="#").footer__social-networks__item
-        +icon("fb.svg")
-      a(href="#").footer__social-networks__item
-        +icon("inst.svg")
+    +footer-social

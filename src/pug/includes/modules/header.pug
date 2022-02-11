@@ -18,19 +18,7 @@ header.header
                 a(href="#" ).nav__link.row.align-items-center Каталог
                   svg(width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg').nav__dropdown__img
                     path(id="vector" d='M1 1L6 6L11 1' stroke='#023838' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                  ul.dropdown-menu
-                    li.dropdown-item
-                      a(href="#").dropdown__link Прямые диваны
-                    li.dropdown-item
-                      a(href="#").dropdown__link Угловые диваны
-                    li.dropdown-item
-                      a(href="#").dropdown__link Модульные диваны
-                    li.dropdown-item
-                      a(href="#").dropdown__link Мини диваны
-                    li.dropdown-item
-                      a(href="#").dropdown__link Кровати
-                    li.dropdown-item
-                      a(href="#").dropdown__link Кресла и стулья
+                  +dropdown-catalog
             li.nav__item.col-auto
               a(href="#").nav__link Отзывы
             li.nav__item.col-auto
@@ -57,25 +45,7 @@ if(pageClass == "main-page")
           h2.subtitle Проще и быстрее, чем в обычном магазине!
           button.button__more Подробнее
         .col-6.section-static
-            .slider
-              .slides
-                input(type="radio" name="radio-btn" checked)#radio1
-                input(type="radio" name="radio-btn")#radio2
-                input(type="radio" name="radio-btn")#radio3
-                input(type="radio" name="radio-btn")#radio4
-                .slide.slide-1
-                  +image("couch-main-1.png", "100%").section-prono__content
-                .slide.slide-2
-                  +image("couch-main-2.png", "100%").section-prono__content
-                .slide.slide-3
-                  +image("couch-main-3.png", "100%").section-prono__content
-                .slide.slide-4
-                  +image("couch-main-2.png", "100%").section-prono__content
-                .slider__nav
-                  label(for="radio1").slider__nav__btn.slider__nav__btn__1
-                  label(for="radio2").slider__nav__btn.slider__nav__btn__2
-                  label(for="radio3").slider__nav__btn.slider__nav__btn__3
-                  label(for="radio4").slider__nav__btn.slider__nav__btn__4
+            +slider-header
 else
   .container-promo.conteiner-promo-2
     .container
@@ -87,4 +57,3 @@ else
             |мебель для жизни
           h2.subtitle Проще и быстрее, чем в обычном магазине!
         .col-6.section-static
-            
