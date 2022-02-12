@@ -5,8 +5,10 @@ block variables
   - let pageClass = 'about-page';
 
 block content
-    .conteiner
-      h1 Тест2
-      +image("Rectagle36.png")
-      h2 Тест2
-      a(href="index.html") Link
+    .container-about
+      ul.breadcrumb.container
+        li.breadcrumb-item
+          a(href='index.html').breadcrumb-item__link Главная
+        li.breadcrumb-item.active(aria-current='page') О нас
+      +content-about
+      +certificates-about

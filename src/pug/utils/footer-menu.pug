@@ -1,0 +1,16 @@
+-
+    var menu = [
+        {name: "О нас", link:"about.html"},
+        {name: "Продукция", link: "#"},
+        {name: "Отзывы", link: "#"},
+        {name: "Контакты", link: "#"},
+        {name: "Новости", link: "#"},
+        {name: "Доставка", link: "#"}
+    ];
+mixin footer-menu
+   .footer__menu
+      h2.footer__titles Меню
+      ul.footer__menu__items
+        for inner in menu
+          li.footer__menu__item
+            a(href=inner.link).footer__menu__item__link=inner.name

@@ -1,0 +1,18 @@
+-
+    var items = [
+        {imagename: "couch-main-1.png", id: "1", check: true},
+        {imagename: "couch-main-2.png", id: "2", check: falce},
+        {imagename: "couch-main-3.png", id: "3", check: falce},
+        {imagename: "couch-main-2.png", id: "4", check: falce},
+    ];
+mixin slider-header
+    .slider
+      .slides
+          for inner in items
+            input(type="radio" name="radio-btn" id=`radio${inner.id}` checked=inner.check)
+          for inner in items
+            div(class=`slide-${inner.id}`).slide
+              +image(inner.imagename, "100%")
+          .slider__nav
+              for inner in items
+                label(for=`radio${inner.id}` class=`slider__nav__btn__${inner.id}`).slider__nav__btn

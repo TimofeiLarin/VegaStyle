@@ -1,0 +1,17 @@
+-
+    var projects = [
+        {id: "1", link: "#"},
+        {id: "2", link: "#"},
+        {id: "3", link: "#"},
+        {id: "4", link: "#"},
+        {id: "2", link: "#"},
+    ];
+mixin slider-projects
+  .block-3-projects__slider
+            .block-3-projects__slider__nav
+              button.block-3-projects__slider__nav__prev
+              button.block-3-projects__slider__nav__next
+            .block-3-projects__slider__wrapper
+              .block-3-projects__slider__slides
+                for inner in projects
+                  a(href=inner.link class=`projects__slide-${inner.id}`).block-3-projects__slider__slides__slide

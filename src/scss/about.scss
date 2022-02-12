@@ -1,0 +1,64 @@
+.container-about {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 45px;
+  font-size: 18px;
+  overflow: hidden;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: -20%;
+    border:1px solid #C2811D;
+    border-radius: 50%;
+    padding: 689px;
+    opacity: 0.4;
+    z-index: -1;
+  }
+  .breadcrumb {
+    background-color: transparent;
+    margin-bottom: 90px;
+    &-item {
+      &__link {
+        color: rgba(48, 48, 48, 0.4);
+        &:hover {
+          color: rgba(48, 48, 48);
+        }
+      }
+    }
+    .active {
+      color: rgba(48, 48, 48);
+    }
+  }
+  .content-about {
+    margin-bottom: 90px;
+    &__title {
+      font-family: "Lora", serif;
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+    &:first-of-type {
+      .col:last-child {
+        order: -1;
+      }
+    }
+  }
+  .certificates-about {
+    padding-bottom: 75px;
+    &__title{
+       margin-bottom: 60px;
+       font-family: "Lora", serif;
+       font-size: 48px;
+    }
+    &__slides {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &__slide {
+        border-radius: 10px;
+        margin-right: 30px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

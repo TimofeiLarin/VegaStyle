@@ -1,0 +1,67 @@
+.container-contacts{
+  padding-top: 60px;
+  padding-bottom: 100px;
+  .breadcrumb {
+    background-color: transparent;
+    margin-bottom: 90px;
+    &-item {
+      &__link {
+        color: rgba(48, 48, 48, 0.4);
+        &:hover {
+          color: rgba(48, 48, 48);
+        }
+      }
+    }
+    .active {
+      color: rgba(48, 48, 48);
+    }
+  }
+  &__title{
+    font-family: "Lora", serif;
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+  .title-item{
+    font-size: 24px;
+    font-weight: 700;
+    font-style: bold;
+    margin-bottom: 15px;
+  }
+  .text-item{
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  &__num-phones{
+    a{
+     color: $dark-green;
+     &:hover{
+      color:$dark-green;
+     }
+    }
+  }
+  &__working-hours{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display:flex;
+    justify-content: flex-start;
+    p{
+      text-align: center;
+      margin-left: 10px;
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+  }
+  &__get-catalog{
+    display:inline-block;
+    margin-top: 30px;
+    padding: 22px 73px;
+    background: $ligt-green;
+    color: $white;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    &:hover{
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+-
+    var news = [
+        {title: "Больше места для хранения вещей — больше пространства для жизни!", date: "18.06.2020", id: "1", link: "#"},
+        {title: "«Янтарное дерево» – декор из польского зернохранилища", date: "18.06.2020", id: "2", link: "#", sm: true},
+        {title: "Мировая новинка: PCS® Preventive Contact System", date: "18.06.2020", id: "3", link: "#", sm: true},
+        {title: "FELDER - портальный, фрезерный ЧПУ с безграничными возможностями", date: "18.06.2020", id: "4", link: "#", sm: true, title2: true},
+        {title: "FELDER - портальный, фрезерный ЧПУ с безграничными возможностями", date: "18.06.2020", id: "5", link: "#", sm: true, title2: true},
+        {title: "FELDER - портальный, фрезерный ЧПУ с безграничными возможностями", date: "18.06.2020", id: "6", link: "#", sm: true},
+    ];
+mixin block-news
+  .block-2-news
+    h2.block-2-news__title.text-center Новости
+    .block-2-news__container
+      for inner in news
+        if(inner.sm)
+          a(href=inner.link class=`block-2-news__news-${inner.id}`).block-2-news__sm
+            if(inner.title2)
+              h3.block-2-news__sm__title-news.block-2-news__sm__title-news-2=inner.title
+                p.block-2-news__news-2__date-news=inner.date
+            else
+              h3.block-2-news__sm__title-news=inner.title
+                p.block-2-news__news-2__date-news=inner.date
+        else
+          a(href=inner.link class=`block-2-news__news-${inner.id}`)
+            h3.block-2-news__news-1__title-news=inner.title
+              p.block-2-news__news-1__date-news=inner.date
+

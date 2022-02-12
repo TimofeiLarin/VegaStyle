@@ -1,5 +1,3 @@
-"use strict";
-
 let counter = 2;
 setInterval(() => {
   document.getElementById(`radio${counter}`).checked = true;

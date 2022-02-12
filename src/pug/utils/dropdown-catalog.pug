@@ -1,0 +1,14 @@
+-
+    var menu = [
+        {name: "Прямые диваны", link: "#"},
+        {name: "Угловые диваны", link: "#"},
+        {name: "Модульные диваны", link: "#"},
+        {name: "Мини диваны", link: "#"},
+        {name: "Кровати", link: "#"},
+        {name: "Кресла и стулья", link: "#"},
+    ];
+mixin dropdown-catalog
+    ul.dropdown-menu
+        for inner in menu
+            li.dropdown-item
+                a.dropdown__link(href=inner.link)=inner.name

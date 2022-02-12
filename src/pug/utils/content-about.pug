@@ -1,0 +1,15 @@
+-
+    var aboutcontent = [
+        {image: "about-image.png", title: "Заголовок", text1: "Проще и быстрее, чем в обычном магазине!Проще и быстрее, чем в обычном магазине!", text2: "Проще и быстрее, чем в обычном магазине!Проще и быстрее, чем в обычном магазине!"},
+        {image: "about-image.png", title: "Заголовок", text1: "Проще и быстрее, чем в обычном магазине!Проще и быстрее, чем в обычном магазине!", text2: "Проще и быстрее, чем в обычном магазине!Проще и быстрее, чем в обычном магазине!"},
+    ];
+mixin content-about
+    for inner in aboutcontent
+      .content-about.container
+        .row
+          .col
+            +image(inner.image, "100%")
+          .col
+            h2.content-about__title=inner.title
+            p.content-about__text=inner.text1
+            p.content-about__text=inner.text2

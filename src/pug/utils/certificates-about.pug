@@ -1,0 +1,13 @@
+-
+    var aboutitems = [
+        {imagename: "certificate-about.png"},
+        {imagename: "certificate-about.png"},
+        {imagename: "certificate-about.png"},
+    ];
+mixin certificates-about
+    .certificates-about.container
+      h2.certificates-about__title.text-center Сертификаты качества
+      .certificates-about__slides
+        for inner in aboutitems
+          .certificates-about__slides__slide
+            +image(inner.imagename, "100%")

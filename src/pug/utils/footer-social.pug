@@ -1,0 +1,13 @@
+-
+    var socialnetworks = [
+        {nameformat: "vk.svg", link:"#"},
+        {nameformat: "fb.svg", link: "#"},
+        {nameformat: "inst.svg", link: "#"},
+    ];
+mixin footer-social
+    .footer__social-networks
+      h2.footer__titles Следите за нами
+      for inner in socialnetworks
+        a(href=inner.link).footer__social-networks__item
+          +icon(inner.nameformat)
+

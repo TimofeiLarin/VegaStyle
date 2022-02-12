@@ -1,0 +1,36 @@
+extends ../layout/main
+
+block variables
+  - let title = 'Vega Style';
+  - let pageClass = 'contacts-page';
+
+block content
+    .container-contacts
+      ul.breadcrumb.container
+        li.breadcrumb-item
+          a(href='index.html').breadcrumb-item__link Главная
+        li.breadcrumb-item.active(aria-current='page') Контакты
+      .container
+        .row
+          .col-5
+            h2.container-contacts__title Контакты
+            .container-contacts__num-phones
+              .row
+                .col
+                  h3.title-item Город
+                  a(href="tel:+7 (000) 000-00-00").text-item +7 777 777 77 77
+                .col
+                  h3.title-item Город
+                  a(href="tel:+7 (000) 000-00-00").text-item +7 777 777 77 77
+            .container-contacts__working-hours
+              +icon("clocke.svg")
+              p Рабочее время
+            .container-contacts__location
+              h3.title-item Адрес
+              p.text-item 196247, Россия, Санкт-Петербург, Ленинский просп., 151, офис 711. Местный телефон: 509
+            .container-contacts__requisites
+              h3.title-item Адрес
+              p.text-item ООО  “Название” Юридический адрес: 196247, Россия, Санкт-Петербург, Ленинский просп., 151, ОГРН 5130021071233
+            button.container-contacts__get-catalog Получить каталог
+          .col-6.offset-1
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae9151f9571eacbf6bfa172a910bd887c5d9e11c0aa4d0db587695fa9950f0a89&amp;width=797&amp;height=644&amp;lang=ru_RU&amp;scroll=true"></script>

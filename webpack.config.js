@@ -131,6 +131,10 @@ module.exports = {
         template: __dirname + '/src/pug/pages/about.pug',
         filename: __dirname + '/dist/about.html'
         }),
+    new HtmlWebpackPlugin({
+        template: __dirname + '/src/pug/pages/contacts.pug',
+        filename: __dirname + '/dist/contacts.html'
+        }),
     new ExtractTextPlugin('[name].css'),
     new BrowserSyncPlugin({
       // browse to http://localhost:3000/ during development,

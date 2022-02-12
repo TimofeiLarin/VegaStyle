@@ -2,7 +2,7 @@ header.header
   .container.container-header
     .row.align-items-center
       .col-auto
-        a(href="#")
+        a(href="index.html")
           +image("logo.svg")
       .col-auto
         .location
@@ -12,7 +12,7 @@ header.header
         nav.container
           ul.nav.row
             li.nav__item.col-auto
-              a(href="about.html").nav__link.nav__link__active О нас
+              a(href="about.html" class=(pageClass === "about-page" ? "nav__link__active" : undefined)).nav__link О нас
             li.nav__item.col-auto
               .dropdown.show
                 a(href="#" ).nav__link.row.align-items-center Каталог
@@ -22,7 +22,7 @@ header.header
             li.nav__item.col-auto
               a(href="#").nav__link Отзывы
             li.nav__item.col-auto
-              a(href="#").nav__link Контакты
+              a(href="contacts.html" class=(pageClass === "contacts-page" ? "nav__link__active" : undefined)).nav__link Контакты
       .col-auto
         button.favorites-button
           +icon("star.svg")
